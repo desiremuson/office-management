@@ -1,1 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+.container {
+  /* margin: 0px 15px; */
+}
+.display-form {
+  margin: 10px;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.x-15 {
+  padding: 0px 15px;
+}
+.x-5 {
+  padding: 0px 5px;
+}
+.bg-light {
+  background: #fff;
+}
+.controles-container {
+  width: 100%;
+  padding: 5%;
+}
+.controles-container > * {
+  width: 100%;
+}
+.btn-save {
+  /* padding: 50px; */
+  margin: 60px 0 !important;
+}
+.example-card {
+  max-width: 300px;
+  background: #dcdcdc;
+  padding: 5px !important;
+}
+.ex-card-header {
+  background: #3f51b5;
+  color: #fff !important;
+  padding: 8px 0 0 0;
+}
+.sub-header {
+  color: #fff !important;
+}
+.card-contents {
+  padding: 15px 0 0 0;
+  margin: 0px !important;
+}
+.with-icon {
+  display: flex;
+  align-items: center;
+  color: #3f51b5;;
+}
+.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+
+/* BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB */
+/* html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.error-msg {
+  color: red;
+}
+.primary-text {
+  color: #1976d2;
+}
+.primary-icon {
+  background: #1976d2;
+  color: #fff;
+
+  padding: 30px;
+  width: 80px;
+  text-align: center;
+} */
+/* BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB */

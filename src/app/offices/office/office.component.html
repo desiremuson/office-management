@@ -1,0 +1,64 @@
+<form [formGroup]="service.form" class="display-form">
+  <mat-grid-list cols="1" rowHeight="420px">
+    <mat-grid-tile>
+      <div class="controles-container">
+        <input type="hidden" formControlName="$id" />
+        <br />
+        <br />
+        <mat-form-field>
+          <input matInput placeholder="Office Name*" formControlName="name" />
+          <mat-error>Required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Email Address*"
+            formControlName="email"
+          />
+          <mat-error>Email format</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Office Tel"
+            formControlName="telephone"
+          />
+          <mat-error
+            *ngIf="service.form.controls['telephone'].errors?.minlength"
+            >Minimum 10 characters</mat-error
+          >
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Address*" formControlName="location" />
+          <mat-error>Required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Max number of occupants*"
+            formControlName="maxoccupants"
+          />
+          <mat-error>Required</mat-error>
+        </mat-form-field>
+
+        <!-- <mat-form-field>
+			<input matInput placeholder="Office Name" formControlName="color" />
+		  </mat-form-field> -->
+        <div class="button-save">
+          <button
+            mat-raised-button
+            color="primary"
+            [disabled]="service.form.invalid"
+            (click)="onSubmit()"
+          >
+            Save Office
+          </button>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>

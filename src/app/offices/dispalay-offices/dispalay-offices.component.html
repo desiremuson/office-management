@@ -1,0 +1,86 @@
+<!-- <div class="container-fluid">
+  <div class="card-columns">
+    <div class="card" *ngFor="let office of officesList">
+      <div class="row no-gutters">
+        <div class="col-auto primary-icon">
+          <div>
+            <i class="fa fa-users fa-2x"></i>
+          </div>
+          <div>
+            <h6>04/20</h6>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card-block px-2">
+            <h5 class="card-title">{{ office.name }}</h5>
+            <p class="card-text">
+              <small class="text-muted">{{ office.location }}</small>
+            </p>
+            <p class="card-text primary-text">{{ office.email }}</p>
+            <p class="card-text primary-text">{{ office.telephone }}</p>
+            <div class="buttons-icon">
+              <i
+                class="fa fa-file-word-o edit"
+                (click)="onViewOffice(office)"
+              ></i>
+              <i class="fa fa-pencil edit" (click)="onEditOffice(office)"></i>
+              <i
+                class="fa fa-trash delete"
+                (click)="onDeleteOffice(office.id)"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<mat-grid-list cols="4">
+  <mat-grid-tile *ngFor="let office of officesList">
+    <mat-card class="example-card">
+      <mat-card-header class="ex-card-header">
+        <div>
+          <mat-card-title>
+            <mat-icon>people_alt</mat-icon>
+          </mat-card-title>
+          <mat-card-subtitle class="sub-header">
+            04/{{ office.maxoccupants }}
+          </mat-card-subtitle>
+        </div>
+        <span class="x-15"></span>
+        <div>
+          <mat-card-title>{{ office.name }}</mat-card-title>
+          <mat-card-subtitle class="sub-header">{{
+            office.location
+          }}</mat-card-subtitle>
+        </div>
+      </mat-card-header>
+      <mat-card-content class="card-contents">
+        <div class="with-icon">
+          <mat-icon>email</mat-icon>
+          <p class="x-5"></p>
+          {{ office.email }}
+        </div>
+
+        <div class="with-icon">
+          <mat-icon>phone</mat-icon>
+          <p class="x-5"></p>
+          {{ office.telephone }}
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="onViewOffice(office)">
+          <mat-icon>remove_red_eye</mat-icon>
+        </button>
+        <button mat-button (click)="onEdit(office)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-button (click)="onDelete(office)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

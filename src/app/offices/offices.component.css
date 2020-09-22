@@ -1,0 +1,17 @@
+.buttons-icon {
+  display: flex;
+  justify-content: space-between;
+  max-width: 75px;
+  margin: 0 auto;
+
+  padding: 10px 0;
+}
+.delete {
+  width: 10px;
+  height: 10px;
+  color: red;
+}
+.edit {
+  width: 10px;
+  height: 10px;
+}

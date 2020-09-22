@@ -1,0 +1,105 @@
+
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">Add Office</h4>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form #form="ngForm" autocomplete="off">
+          <div class="input-group mb-3">
+            <input
+              class="form-control"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+              name="name"
+              #name="ngModel"
+              [(ngModel)]="service.formData.name"
+              placeholder="Office Name"
+              required
+            />
+            <h4 *ngIf="name.invalid && name.touched" class="error-msg">*</h4>
+          </div>
+          <div class="input-group mb-3">
+            <input
+              name="email"
+              type="email"
+              class="form-control"
+              #email="ngModel"
+              [(ngModel)]="service.formData.email"
+              placeholder="Email Address"
+              required
+            />
+            <h4 *ngIf="email.invalid && email.touched" class="error-msg">*</h4>
+          </div>
+          <div class="input-group mb-3">
+            <input
+              name="telephone"
+              type="text"
+              class="form-control"
+              #telephone="ngModel"
+              [(ngModel)]="service.formData.telephone"
+              placeholder="Office Tel"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <input
+              name="location"
+              type="text"
+              class="form-control"
+              #location="ngModel"
+              [(ngModel)]="service.formData.location"
+              placeholder="Enter your Address"
+              required
+            />
+            <h4 *ngIf="location.invalid && location.touched" class="error-msg">
+              *
+            </h4>
+          </div>
+          <div class="input-group mb-3">
+            <input
+              name="maxoccupants"
+              type="text"
+              class="form-control"
+              #maxoccupants="ngModel"
+              [(ngModel)]="service.formData.maxoccupants"
+              placeholder="Enter Maximum Number"
+              required
+            />
+            <h4
+              *ngIf="maxoccupants.invalid && maxoccupants.touched"
+              class="error-msg"
+            >
+              *
+            </h4>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          [disabled]="form.invalid"
+          type="submit"
+          class="btn btn-primary"
+          (click)="onSave(form)"
+        >
+          Save Office
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
